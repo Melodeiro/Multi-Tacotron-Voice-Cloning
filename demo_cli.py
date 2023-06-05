@@ -168,7 +168,8 @@ if __name__ == '__main__':
     print("Synthesizing the waveform:")
     # Synthesizing the waveform is fairly straightforward. Remember that the longer the
     # spectrogram, the more time-efficient the vocoder.
-    generated_wav = vocoder.infer_waveform(spec, target=22050)
+    print("synthesizing sample rate " + synthesizer.sample_rate)
+    generated_wav = vocoder.infer_waveform(spec, target=synthesizer.sample_rate)
     
     
     ## Post-generation
