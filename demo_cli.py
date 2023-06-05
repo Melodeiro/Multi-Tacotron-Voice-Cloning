@@ -159,6 +159,8 @@ if __name__ == '__main__':
     # passing return_alignments=True
     specs = synthesizer.synthesize_spectrograms(texts, embeds)
     spec = specs[0]
+    print(len(specs))
+    print(specs)
     print("Created the mel spectrogram")
     
     
